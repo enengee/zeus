@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Topic, Problem } from '@/app/lib/models';
-import { getAllTopics, getTopicBySlugOrId, getProblemsByTopic } from '@/app/lib/mock/data';
+import { getAllTopics, getTopicBySlug, getProblemsByTopic } from '@/app/lib/mock/data';
 
 export async function generateStaticParams() {
   const topics = await getAllTopics();
@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 }
 
 async function getTopic(slug: string): Promise<Topic | undefined> {
-  return getTopicBySlugOrId(slug);
+  return getTopicBySlug(slug);
 }
 
 async function getProblemsByTopicId(topicId: string): Promise<Problem[]> {

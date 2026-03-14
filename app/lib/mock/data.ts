@@ -68,8 +68,9 @@ export async function getAllTopics(): Promise<Topic[]> {
   return topics;
 }
 
-export async function getTopicBySlugOrId(idOrSlug: string): Promise<Topic | undefined> {
-  return topics.find((t) => t.id === idOrSlug || t.slug === idOrSlug);
+// REST endpoint could be: GET /topics/slug/{slug}
+export async function getTopicBySlug(slug: string): Promise<Topic | undefined> {
+  return topics.find((t) => t.slug === slug);
 }
 
 export async function getProblemsByTopic(topicId: string): Promise<Problem[]> {
