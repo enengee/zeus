@@ -62,6 +62,8 @@ export const problems: Problem[] = [
   },
 ];
 
+// TODO: Replace with actual API calls and subject to change,
+// depending on the backend implementation.
 export async function getAllTopics(): Promise<Topic[]> {
   return topics;
 }
