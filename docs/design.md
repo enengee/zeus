@@ -110,10 +110,9 @@ The Worker:
 ### 3.3 Auth — Supabase Auth (SSO only)
 - Don't roll your own. Supabase Auth is unlimited on the free tier and shares the same project as the Postgres DB below — one provider, one dashboard, one set of credentials to rotate.
 - Issues JWTs that Workers + Session Manager verify via the Supabase JWKS endpoint.
-- **SSO-only**: Google and Apple (Sign in with Apple) at launch; GitHub/Microsoft easy to add later. Email/password sign-up is **disabled** in Supabase Auth settings — no password reset flows, no email verification to build, no credential stuffing surface.
-- Why SSO-only: zero password handling, fewer abuse vectors (throwaway email signups), faster onboarding, and Apple covers users who won't use Google.
+- **SSO-only**: Google at launch; GitHub/Microsoft easy to add later. Email/password sign-up is **disabled** in Supabase Auth settings — no password reset flows, no email verification to build, no credential stuffing surface.
+- Why SSO-only: zero password handling, fewer abuse vectors (throwaway email signups), faster onboarding.
 - Row-Level Security (RLS) policies in Postgres key off `auth.uid()` for defense in depth.
-- Note: Apple requires a paid Apple Developer account ($99/yr) to issue the Services ID and keys. Budget accordingly, or launch with Google-only and add Apple post-launch.
 
 ### 3.4 Database — Supabase (Postgres)
 - Bundled with Auth above. Free tier: 500 MB DB, 1 GB file storage, 2 GB egress, 50k MAU. Plenty for launch.

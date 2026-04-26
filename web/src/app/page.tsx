@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { Topic } from '@/app/lib/models';
-import { getAllTopics } from '@/app/lib/mock/data';
+import { Topic } from '@/lib/models';
+import { getAllTopics } from '@/lib/mock/data';
+import UserNav from '@/components/UserNav';
 
 async function getTopics(): Promise<Topic[]> {
   return getAllTopics();
@@ -14,6 +15,7 @@ export default async function Home() {
       <header>
         <h1>DevOps Learning Tracks</h1>
         <p>Master industry-standard tools with hands-on challenges.</p>
+        <UserNav />
       </header>
 
       <section>

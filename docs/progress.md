@@ -1,1 +1,3 @@
 - [x] Static frontend scaffold under `web/`: Next.js 16 App Router + React 19 + TypeScript + Tailwind v4, static export (`output: 'export'`).
+- [x] Deployed to Cloudflare Pages: https://zeus-bzy.pages.dev/
+- [x] Supabase Auth wired in: Google SSO via `@supabase/supabase-js`, `/login` + `/auth/callback` pages, session in `localStorage`.

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Topic, Problem } from '@/app/lib/models';
-import { getAllTopics, getTopicBySlug, getProblemsByTopic } from '@/app/lib/mock/data';
+import { Topic, Problem } from '@/lib/models';
+import { getAllTopics, getTopicBySlug, getProblemsByTopic } from '@/lib/mock/data';
 
 export async function generateStaticParams() {
   const topics = await getAllTopics();

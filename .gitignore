@@ -42,3 +42,9 @@ web/next-env.d.ts
 
 # Antigravity
 .agents/
+
+# Kiro
+.kiro/
+
+# VSCode
+.vscode/
