@@ -1,0 +1,14 @@
+version: 2.1
+setup: true  # This tells CircleCI this is a setup pipeline
+
+orbs:
+  path-filtering: circleci/path-filtering@3.0.0
+
+workflows:
+  always-run:
+    jobs:
+      - path-filtering/filter:
+          base-revision: main
+          config-path: .circleci/continue-config.yml
+          mapping: |
+            web/.* run-web true
