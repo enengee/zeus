@@ -2,4 +2,4 @@
 - [x] Deployed to Cloudflare Pages: https://zeus-bzy.pages.dev/
 - [x] Supabase Auth wired in: Google SSO via `@supabase/supabase-js`, `/login` + `/auth/callback` pages, session in `localStorage`.
 - [x] CICD with CircleCI.
-- [ ] Deploy to Cloudflare Pages.
+- [x] Deploy to Cloudflare Pages.
